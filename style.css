@@ -1,0 +1,832 @@
+@import url('https://fonts.google.com/specimen/Commissioner');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Commissioner', sans-serif; 
+}
+
+/* General styling */
+section {
+    padding:  0 0;
+    font-family: 'Commissioner', sans-serif; 
+}
+
+section .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Commissioner', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 30px 0;
+    font-family: 'Commissioner', 'sans-serif';
+    z-index: 999;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    padding: 0 20px; 
+    margin-right: 120px;
+
+}
+
+.navbar .toggle-button {
+    position: absolute;
+    display: none; 
+    top: 35px;
+    right: 1px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+} 
+
+.navbar .toggle-button:hover {
+    color: #fff;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 120px;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 4px;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.navbar .menu .li a:hover {
+    color: #fff;
+}
+
+@media (max-width: 500px) {
+    .navbar .toggle-button {
+        display: flex;
+    }
+    
+    .navbar .menu {
+      display: none;
+    } 
+    
+    .navbar .max-width .logo {
+      flex-direction: column;  
+      align-items: flex-start;
+    }
+    .navbar .menu li {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px; 
+    }
+    .navbar .menu-active {
+        display: inline;
+    }
+}
+
+/* Menu Btn */
+.menu-btn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Home section */
+.home {
+    display: flex;
+    background: url(../images/images/image-hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;    
+}
+/* @media (min-width: 500px) and (max-width: 1440px) {
+    .home {
+    /* display: flex;
+    background-size: contain;
+    height: 150vh; */
+    
+
+
+.home .max-width {
+    margin: auto 0 auto 10px;
+}
+
+/* Mastercraft Bamboo Monitor Riser section */
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width {
+    background-color: #fff;
+    max-width: 600px;
+    width: 900px;
+    margin-left: 310px;
+    border: 1px solid rgb(236, 243, 243);
+    border-radius: 8px;
+    padding-top: -15px;
+    height: 200px;
+    position: absolute;
+    bottom: 80px;
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width .logo1 {
+    width: 20px;   
+    margin: auto;
+    position: absolute;
+    height: 270px;
+    bottom: -45px;
+    padding-left: 270px;
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width .title {
+    color: #000;
+    padding-top: 50px;
+    margin-bottom: -15px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Commissioner', sans-serif;
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .Mastercraft-Bamboo-Monitor-Riser-content .text {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 50px;  
+    margin-bottom: 20px;
+    margin-left: 90px;
+    color: rgb(133, 129, 129); 
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .column {
+    width: calc(50% - 30%);
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .left button {
+    display: inline-flex;
+    width: 180px;
+    background: rgb(236, 243, 243);
+    color: rgb(11, 90, 81);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 15px 35px;
+    margin-left: 30px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal-bg {
+    box-shadow:  800px 800px 50px rgba(0, 0, 0, 0.3);
+    width: 600px;
+    height: 588px;
+    margin-top: 171px;
+    position: absolute;
+    top: 0;
+    left: 50%; 
+    margin-left: 2px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgb(219, 217, 217);
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.5s, top 0.5s; 
+} 
+
+/* .bg-modal {
+   
+} */
+
+.modal-close .heading {
+    font-size: 18px;
+    font-weight: 800;
+}
+.modal p {
+    font-size: 13px;
+    color: grey;
+    margin-top: -15px;
+    margin-right: 70px;
+}
+.modal-bg .max-width {
+    background-color: #fff;
+    width: 540px;
+    height: 100px;
+    margin: 20px 30px;
+    border-radius: 4px;
+    border: 1px solid rgb(196, 194, 194);
+}
+
+.modal-bg .max-width span {
+    font-size: 22px;
+    padding-left: 15px;
+    display: flex;
+    padding-top: 15px;
+    color: rgb(184, 244, 237);
+}
+.modal-bg .max-width .icon {
+    color: grey;
+}
+.modal-bg .max-width .title1 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    margin-top: -25px;
+    padding-left: 50px;
+}
+.modal-bg .max-width .title1:hover {
+    color: rgb(62, 188, 174);
+    cursor: pointer;
+}
+.modal-bg .text {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 50px;
+    padding-top: 10px;
+    color: rgb(173, 170, 170);
+    text-align: justify;
+    line-height: 20px;
+}
+.open-modal {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-close {
+    font-size: 13px;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px;
+}
+.modal-cl {
+    color: grey;
+    font-size: 15px;
+    cursor: pointer;
+}
+.modal-cl:hover {
+    color: #000;
+}
+.modal-bg .max-width1 {
+    background-color: #fff;
+    width: 540px;
+    height: 100px;
+    margin: 20px 30px;
+    border-radius: 4px;
+    border: 1px solid rgb(196, 194, 194);
+}
+.modal-bg .max-width1 .title2 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+    display: flex;
+    margin-top: 25px;
+    padding-left: 50px;
+    cursor: pointer;
+}
+.modal-bg .max-width1 .title2:hover {
+    color: rgb(30, 200, 180);
+}
+.modal-bg .max-width1 .icon1{
+    color: grey;
+    display: flex;
+    font-size: 22px;
+    padding-left: 15px;
+    margin-top: -20px;
+}
+.modal-bg .max-width1 .icon1:hover {
+    cursor: pointer;
+}
+.modal-bg .max-width1 .title2 span {
+    color: rgb(30, 200, 180);
+    padding-left: 30px;
+}
+.modal-bg .max-width1 .text1 {
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 450px;
+    margin-top: -20px;
+}
+.modal-bg .max-width1 .text1 span {
+    font-size: 12px;
+    color: rgb(196, 194, 194);
+}
+.modal-bg .max-width1 p {
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 50px;
+    padding-top: 10px;
+    color: rgb(173, 170, 170);
+    text-align: justify;
+    line-height: 20px;
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .left button:hover {
+    color: white; 
+    background: rgb(17, 127, 114);
+} 
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width .right a:hover {
+    color: white;
+    background: rgb(17, 127, 114);
+} 
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width .logo-text {
+    margin-left: 375px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+
+.Mastercraft-Bamboo-Monitor-Riser .max-width .right a {
+    display: flex;
+    width: 150px;
+    background: rgb(236, 243, 243);
+    color: rgb(12, 108, 97); 
+    font-size: 11px;
+    font-weight: 800;
+    padding: 14px 0;
+    padding-left: 55px;
+    margin-top: 8px;
+    margin-left: 380px;
+    bottom: 35px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    border: none solid rgba(216, 213, 213, 0.863);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Figures section */
+.Figures .max-width { 
+    background: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+    margin-top: -55px;
+    margin-left: 310px;
+    border: 1px solid rgb(236, 243, 243);
+    border-radius: 8px;
+    height: 150px;
+    position: relative;
+    padding-top: 40px;
+    padding-left: 25px;
+    /* display: block; */
+}
+
+.Figures .max-width .title1 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+.Figures .max-width .Figures .text1 {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+    top: 10px;
+    position: relative;
+}
+
+.Figures .max-width .Figures .txt1 {
+    font-size: 50px;
+    padding-left: 320px;
+    top: 20px;
+    position:absolute;
+    color: rgba(169, 165, 165, 0.705);  
+}
+
+.Figures .max-width .title2 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: -30px;
+    margin-left: 200px;
+}
+
+.Figures .max-width .Figures .text2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+    top: -5px;
+    margin-left: 200px;
+    position: relative;
+}
+
+.Figures .max-width .Figures .txt2 {
+    font-size: 50px;
+    padding-left: 150px;
+    top: -85px;
+    position:relative;
+    color: rgba(169, 165, 165, 0.705);  
+}
+
+.Figures .max-width .title3 {
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: -30px;
+    margin-left: 350px;
+}
+
+.Figures .max-width .Figures .text3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+    top: -20px;
+    margin-left: 350px;
+    position: relative;
+}
+
+
+.Figures .max-width .column {
+    width: calc(50% - 30%);
+    
+}
+
+.Figures .max-width .left a {
+    width: 500px;
+    background: rgb(247, 245, 245);
+    color: #fff;
+    padding-top: 6px;
+    margin-right: 50px;
+    margin-top: -59px;
+    border-radius: 25px;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    height: 9px;
+}
+
+.Figures .max-width .right a {
+    width: 400px;
+    background: rgb(30, 200, 180); 
+    color: #fff;
+    padding-top: 6px;
+    margin-right: 50px;
+    margin-top: -8px;
+    border-radius: 25px;
+    border: none solid rgba(169, 165, 165, 0.705);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    height: 9px;
+}
+
+/* About this project Section */
+
+.About-this-project-section .max-width {
+    background-color: #fff;
+    max-width: 600px;
+    width: 900px;
+    margin-top: 25px;
+    margin-bottom: 250px;
+    margin-left: 310px;
+    border: 1px solid rgb(236, 243, 243);
+    border-radius: 8px;
+    height: 900px;
+}
+
+.About-this-project-section .max-width .title {
+    color: #000;
+    padding: 40px 0;
+    padding-right: 380px;
+    margin-bottom: -15px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.About-this-project-section .max-width .About-this-project-section-content .text1 {
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 500;
+    padding-left: 40px;
+    color: rgb(144, 128, 128);
+    /* text-align: justify; */
+    justify-content: center;
+
+ }     
+
+ .About-this-project-section .max-width .About-this-project-section-content .text2 {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 20px 0;
+    padding-left: 40px;
+    color: rgb(144, 128, 128);
+    justify-content: center;
+ }
+
+
+.Bamboo-stand .max-width {
+    width: 520px;
+    background-color: #fff;
+    margin-left: 350px;
+    margin-top: -890px;
+    border: 1px solid rgb(218, 220, 220);
+    border-radius: 5px;
+    height: 35vh;
+}
+
+.Bamboo-stand .max-width .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px 0;
+    padding-right: 350px;
+    margin-bottom: -10px;
+}
+
+.Bamboo-stand .max-width .Bamboo-Stand-content .text1 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -50px;
+    padding-left: 390px;
+    color: rgb(31, 183, 165);
+}
+
+.Bamboo-stand .max-width .Bamboo-Stand-content p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    color: rgb(144, 128, 128)
+}
+
+.Bamboo-stand .max-width .Bamboo-Stand-content .text2 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.Bamboo-stand .max-width .Bamboo-Stand-content .text2 span {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(144, 128, 128);
+    margin-top: 10px;
+}
+
+.Bamboo-stand .max-width .column {
+    width: calc(50% - 30%);
+}
+
+.Bamboo-stand .max-width .right button {
+    font-size: 12px;
+    font-weight: 700;
+    background: rgb(31, 183, 165);
+    color: #fff;
+    width: 110px;
+    margin-top: -35px;
+    margin-left: 380px;
+    padding: 10px 0;
+    padding-left: 12px;
+    text-decoration: none;
+    display: flex;
+    border: 1px solid rgba(169, 165, 165, 0.705);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.modal_container {
+box-shadow: rgb(218, 220, 220);
+width: 450px;
+height: 350px;
+margin-top: 285px;
+position: absolute;
+top: 0;
+left: 50%;
+margin-left: 2px;
+background-color: #fff;
+border-radius: 8px;
+border: 1px solid rgb(219, 217, 217);
+text-align: center;
+transform: translate(-50%, -50%) scale(0.1);
+visibility: hidden;
+transition: transform 0.5s, top 0.5s;  
+}
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+} 
+.modal_container .icon-check {
+    margin-top: 40px;
+}
+.modal_container .modal-heading {
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 25px;
+}
+.modal_container .popup p {
+    color: rgb(173, 170, 170);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 25px;
+    padding: 0 30px;
+    justify-content: center;
+    margin-top: 10px;
+}
+.modal_container .popup .column {
+    width: calc(50% - 30%);
+}
+.modal_container .popup button {
+    background: rgb(62, 188, 174);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: 185px;
+    width: 90px;
+    height: 40px;
+    border: 10px none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.modal_container .popup button:hover {
+    color: #fff;
+    background:rgb(19, 91, 82);
+}
+.Bamboo-stand .right button:hover {
+    color: white;
+    background: rgb(11, 90, 81);
+}
+
+.Black-Edition-stand .max-width {
+    width: 520px;
+    background-color: #fff;
+    margin-left: 350px;
+    margin-top: 15px;
+    border: 1px solid rgb(218, 220, 220);
+    border-radius: 5px;
+    height: 35vh;
+}
+
+.Black-Edition-stand .max-width .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px 0;
+    padding-right: 320px;
+    margin-bottom: -10px;
+}
+
+.Black-Edition-stand .max-width .Black-Edition-stand-content .text2 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -50px;
+    padding-left: 390px;
+    color: rgb(31, 183, 165);
+}
+
+.Black-Edition-stand .max-width .Black-Edition-stand-content p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    color: rgb(144, 128, 128)
+}
+
+.Black-Edition-stand .max-width .Black-Edition-stand-content .text3 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+
+.Black-Edition-stand .max-width .Black-Edition-stand-content .text3 span {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(144, 128, 128);
+    margin-top: 10px;
+}
+
+.Black-Edition-stand .max-width .column {
+    width: calc(50% - 30%);
+}
+
+.Black-Edition-stand .max-width .right a {
+    font-size: 12px;
+    font-weight: 700;
+    background: rgb(31, 183, 165);
+    color: #fff;
+    width: 110px;
+    margin-top: -35px;
+    margin-left: 380px;
+    padding: 10px 0;
+    padding-left: 12px;
+    text-decoration: none;
+    display: flex;
+    border: 1px solid rgba(169, 165, 165, 0.705);
+    border-radius: 20px;
+}
+
+.Black-Edition-stand .right a:hover {
+    color: white;
+    background: rgb(11, 90, 81);
+}
+
+.Mahogany-Special-Edition .max-width {
+    width: 520px;
+    background-color: #fff;
+    margin-left: 350px;
+    margin-top: 15px;
+    border: 1px solid rgb(235, 238, 238);
+    border-radius: 5px;
+    height: 35vh;
+}
+
+.Mahogany-Special-Edition .max-width .title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 30px 0;
+    padding-right: 280px;
+    margin-bottom: -10px;
+    color: rgb(134, 132, 132);
+}
+
+.Mahogany-Special-Edition .max-width .Mahogany-Special-Edition-content .text2 {
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -50px;
+    padding-left: 380px;
+    color: rgb(170, 216, 211);
+}
+
+
+.Mahogany-Special-Edition .max-width .Mahogany-Special-Edition-content p {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    color: rgb(202, 199, 199);
+}
+
+.Mahogany-Special-Edition .max-width .Mahogany-Special-Edition-content .text3 {
+    font-size: 25px;
+    font-weight: 700;
+    padding-left: 20px;
+    color: rgb(134, 132, 132);
+}
+
+.Mahogany-Special-Edition .max-width .Mahogany-Special-Edition-content .text3 span {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(173, 170, 170);
+    margin-top: 10px;
+}
+
+.Mahogany-Special-Edition .max-width .column {
+    width: calc(50% - 30%);
+}
+
+.Mahogany-Special-Edition .max-width .right a {
+    font-size: 12px;
+    font-weight: 700;
+    background: rgb(202, 199, 199);
+    color: rgb(248, 249, 249);
+    width: 110px;
+    margin-top: -35px;
+    margin-left: 380px;
+    padding: 10px 0;
+    padding-left: 20px;
+    text-decoration: none;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Media Querry
+@media (max-width: 1040px){
+    .Mastercraft-Bamboo-Monitor-Riser .max-width {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    .icon-check
+} */
+
